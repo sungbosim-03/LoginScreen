@@ -36,8 +36,9 @@ namespace LoginScreen
             if (inputID == myID && inputPW == myPW)
             {
                 MessageBox.Show("로그인성공!");
+                lblErrorMsg.Visible = false;
             }
-            else { MessageBox.Show("로그인실패~"); }
+            else lblErrorMsg.Visible = true;
 
         }
 
@@ -60,5 +61,6 @@ namespace LoginScreen
                 txtPW.UseSystemPasswordChar = true;
             }
         }
+
     }
 }
